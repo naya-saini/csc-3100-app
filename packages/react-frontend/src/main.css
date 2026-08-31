@@ -20,14 +20,14 @@ th
   border: 1px solid #ccc;
   padding: 10px;
   text-align: left;
-  color: rgb(255, 255, 255);
+  color: black;
 }
 
 td {
   border: 1px solid #ccc;
   padding: 10px;
   text-align: left;
-  color: rgba(209, 0, 0, 0.384);
+  color: black;
 }
 
 form {
@@ -48,6 +48,13 @@ button {
   cursor: pointer;
 }
 
-tr:hover td {
+tbody tr:nth-child(1):hover td {
   background-color: #8ACE00;
 }
+
+tbody tr:nth-child(2):hover td {
+  background-color: hwb(314 11% 3%);
+}
+
+tbody tr:nth-child(3):hover td {
+  background-color: hwb(202 22% 5%);
