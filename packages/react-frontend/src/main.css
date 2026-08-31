@@ -15,11 +15,19 @@ table {
   margin-bottom: 30px;
 }
 
-th,
+th
+{
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+  color: rgb(255, 255, 255);
+}
+
 td {
   border: 1px solid #ccc;
   padding: 10px;
   text-align: left;
+  color: rgba(209, 0, 0, 0.384);
 }
 
 form {
@@ -38,4 +46,8 @@ button {
   width: fit-content;
   padding: 8px 14px;
   cursor: pointer;
+}
+
+tr:hover td {
+  background-color: #8ACE00;
 }
