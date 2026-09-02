@@ -7,11 +7,11 @@
   "type": "commonjs",
   "main": "index.js",
   "workspaces": [
-    "react-frontend"
+    "packages/*"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm run -w react-frontend dev",
-    "start": "npm run -w react-frontend dev"
+    "start": "npm run -w react-frontend start"
   }
 }
