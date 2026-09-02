@@ -48,12 +48,12 @@ button {
   cursor: pointer;
 }
 
-tbody tr:nth-child(1):hover td {
-  background-color: #8ACE00;
-}
-
 tbody tr:nth-child(2):hover td {
   background-color: hwb(314 11% 3%);
+}
+
+tbody tr:nth-child(1):hover td {
+  background-color: #8ACE00;
 }
 
 tbody tr:nth-child(3):hover td {
