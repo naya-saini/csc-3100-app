@@ -40,10 +40,6 @@ app.get("/", (req, res) => {
 });
 
 app.get("/users", (req, res) => {
-  res.send(users);
-});
-
-app.get("/users", (req, res) => {
   const name = req.query.name;
   if (name != undefined) {
     let result = findUserByName(name);
