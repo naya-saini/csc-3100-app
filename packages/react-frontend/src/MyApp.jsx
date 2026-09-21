@@ -56,7 +56,7 @@ const promise = await fetch("Http://localhost:8000/users", {
   if (promise.status !== 201) {
     throw new Error("Failed to create user");
   }
-  return promise.json();
+  return promise.json();}
 
 /*function postUser(person) {
   const promise = fetch("Http://localhost:8000/users", {
