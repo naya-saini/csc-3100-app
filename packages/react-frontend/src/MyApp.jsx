@@ -16,7 +16,13 @@ function MyApp() {
   }
 
   function updateList(person) {
-    setCharacters([...characters, person]);
+    postUser(person)
+      .then((createdUser) => {
+        setCharacters([ ...characters, createdUser ]);
+      })
+      .catch((error) => {
+        console.error("Error updating list:", error);
+      });
   }
 
   useEffect(() => {
