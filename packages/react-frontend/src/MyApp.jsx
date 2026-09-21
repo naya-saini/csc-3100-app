@@ -7,13 +7,37 @@ import React, { useState, useEffect } from "react";
 function MyApp() {
   const [characters, setCharacters] = useState([]);
 
-  function removeOneCharacter(index) {
+  /*function removeOneCharacter(index) {
     const updated = characters.filter((character, i) => {
       return i !== index;
     });
 
     setCharacters(updated);
-  }
+  }*/
+
+   function removeOneCharacter(index) {
+  const character = characters[index];
+
+  fetch(`http://localhost:8000/users/${character.id}`, {
+    method: "DELETE",
+  })
+    .then((response) => {
+      if (response.status === 204) {
+        const updated = characters.filter((character, i) => {
+          return i !== index;
+        });
+
+        setCharacters(updated);
+      } else if (response.status === 404) {
+        console.log("Resource not found");
+      } else {
+        console.log("Delete failed");
+      }
+    })
+    .catch((error) => {
+      console.error("Error deleting user:", error);
+    });
+} 
 
   function updateList(person) {
     postUser(person)
@@ -51,7 +75,7 @@ function fetchUsers() {
   //return promise;
 }
 async function postUser(person) {
-const promise = await fetch("Http://localhost:8000/users", {
+const promise = await fetch("http://localhost:8000/users", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
