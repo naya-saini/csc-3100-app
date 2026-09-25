@@ -47,15 +47,26 @@ button {
   padding: 8px 14px;
   cursor: pointer;
 }
-
-tbody tr:nth-child(2):hover td {
-  background-color: hwb(314 11% 3%);
+thead tr:hover th{
+  background-color: #d20303;
 }
 
 tbody tr:nth-child(1):hover td {
-  background-color: #8ACE00;
+  background-color: #f07c0f;
+}
+
+tbody tr:nth-child(2):hover td {
+  background-color: #f3d829;
 }
 
 tbody tr:nth-child(3):hover td {
+  background-color: rgb(58, 204, 95)
+}
+
+tbody tr:nth-child(4):hover td {
   background-color: hwb(202 22% 5%);
+}
+
+tbody tr:hover td {
+  background-color: hwb(283 22% 18%);
 }
