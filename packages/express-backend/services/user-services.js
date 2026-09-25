@@ -27,12 +27,12 @@ function getMongoURI(dbname) {
   return finalURI;
 }
 
-// Mongoose 6+ does not need useNewUrlParser or useUnifiedTopology
+/*/ Mongoose 6+ does not need useNewUrlParser or useUnifiedTopology
 mongoose
   .connect(getMongoURI("users"))
   .then(() => console.log("Successfully connected to MongoDB"))
   .catch((error) => console.log("Connection Error:", error));
-
+*/
 function addUser(user) {
   const userToAdd = new userModel(user);
   return userToAdd.save();
